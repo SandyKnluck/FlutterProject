@@ -13,7 +13,7 @@ class MyHomePage extends StatelessWidget {
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 2)),
-          backgroundColor: const Color.fromARGB(255, 140, 239, 254),
+          backgroundColor: const Color.fromARGB(255, 200, 248, 255),
         ),
         backgroundColor: const Color.fromARGB(255, 255, 229, 239),
         body: Row(
