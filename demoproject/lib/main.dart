@@ -1,5 +1,11 @@
+import 'package:demoproject/page_answer/answer1.dart';
+import 'package:demoproject/page_answer/answer2.dart';
+import 'package:demoproject/page_answer/answer3.dart';
+import 'package:demoproject/page_answer/answer4.dart';
+import 'package:demoproject/first_page.dart';
 import 'package:flutter/material.dart';
 import 'homepage.dart';
+import 'my_statefull_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,6 +15,39 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   // This widget is the root of your application.
   @override
+  /*
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Demo Page'),
+        backgroundColor: Colors.white,
+      ),
+      body: Column(
+        children: [
+          Container(
+            height: 200,
+            width: double.infinity,
+            color: Colors.grey,
+            child: const Text('Item1'),
+          ),
+          Container(
+            height: 200,
+            width: double.infinity,
+            color: Colors.green,
+            child: const Text('Item2'),
+          ),
+          Container(
+            height: 200,
+            width: double.infinity,
+            color: Colors.yellow,
+            child: const Text('Item3'),
+          )
+        ],
+      ),
+    );
+  }
+*/
+
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Flutter Demo',
@@ -17,35 +56,20 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: Scaffold(
-          appBar: AppBar(
-            title: const Text("Flutter Demo \u{1F984}",
-                style: TextStyle(
-                    color: Color.fromARGB(255, 152, 113, 171),
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold)),
-            leading: const Icon(Icons.add),
-            backgroundColor: Color.fromARGB(255, 255, 211, 231),
-          ),
-          body: Container(
-            color: Color.fromARGB(255, 254, 197, 255),
-            padding: EdgeInsets.all(20),
-            margin: const EdgeInsets.all(20),
-            child: const Text('Hello'),
-          ),
-          floatingActionButton: FloatingActionButton(
-            backgroundColor: Color.fromARGB(255, 255, 205, 233),
-            onPressed: () {
-              print("Hello");
-            },
-            child: const Icon(
-              Icons.phone,
-              color: Color.fromARGB(255, 72, 162, 189),
-              size: 37,
-            ),
-          ),
-        )
-        //const Text('Hello'),
-        );
+        home: const FirstPage());
+  }
+}
+
+class GreetingWidget extends StatelessWidget {
+  final String name;
+  const GreetingWidget({super.key, required this.name});
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+            title: const Text('Demo APP'),
+            backgroundColor: const Color.fromARGB(255, 255, 196, 215)),
+        body: Center(child: Text('Hello, $name')));
   }
 }
