@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
             color: Colors.green,
             child: const Text('Item2'),
           ),
-          Container(
+
             height: 200,
             width: double.infinity,
             color: Colors.yellow,
@@ -53,7 +53,8 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          colorScheme: ColorScheme.fromSeed(
+              seedColor: const Color.fromARGB(255, 243, 42, 2)),
           useMaterial3: true,
         ),
         home: const FirstPage());
@@ -73,3 +74,4 @@ class GreetingWidget extends StatelessWidget {
         body: Center(child: Text('Hello, $name')));
   }
 }
+
